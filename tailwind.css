@@ -1,0 +1,11 @@
+/* Generated from tokens.json by build.js: do not edit. */
+@theme {
+  --color-brand-purple: #9141ac;
+  --color-brand-purple-hover: #76328e;
+  --color-brand-purple-dark: #5b2370;
+  --color-brand-purple-light: #f2e8f5;
+  --color-brand-purple-subtle: #faf6fb;
+  --color-brand-black: #0a0a0a;
+  --color-brand-white: #ffffff;
+  --font-manrope: "Manrope", sans-serif;
+}

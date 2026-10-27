@@ -1,0 +1,17 @@
+{
+  "name": "@socialdroids/design-tokens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Brand colors and font shared by user_interface (Tailwind 4) and sd_app (NativeWind)",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./tailwind.css": "./tailwind.css",
+    "./tokens.json": "./tokens.json"
+  },
+  "files": ["index.js", "tokens.json", "tailwind.css"],
+  "scripts": {
+    "build": "node build.js",
+    "test": "node --test"
+  }
+}
