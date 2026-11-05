@@ -8,10 +8,28 @@ The brand of the robot screen and the `sd_supervisor`, shared by the web
 |---|---|
 | `tokens.json` | The values. Edit here. |
 | `tailwind.css` | Web (Tailwind 4): `@import "@socialdroids/design-tokens/tailwind.css";` gives `bg-brand-purple`, `text-brand-black`, `font-manrope`... Generated. |
-| `index.js` | App (NativeWind): `theme: { extend: require('@socialdroids/design-tokens').nativewindTheme }`. |
+| `semantic.css` | Web: semantic tokens (surface, foreground, primary, success/warning/danger/offline, radius, space), light and `.dark`. Generated. |
+| `index.js` | App (NativeWind): `theme: { extend: require('@socialdroids/design-tokens').nativewindTheme }`, plus `nativewindVars` for the scheme. |
 
 Only the font's name is here, not the font file: each app loads Manrope (or
 falls back to the system font).
+
+## Semantic tokens
+
+`tokens.json › semantic` has the same names in `light` and `dark` (a test
+fails if one scheme lacks a name). The names are for the role, not the hue:
+`bg-surface`, `bg-surface-muted`, `border-border`, `text-foreground`,
+`text-muted-foreground`, `bg-primary text-primary-foreground`,
+`bg-destructive`, and the states as pairs: `bg-success-bg text-success-fg`
+(also `warning`, `danger`, `offline`). `rounded-control|card|pill` and
+`gap-tight|field|section` are named so they never replace Tailwind's own
+`rounded-lg` or `p-4`.
+
+- **Web:** `@import "@socialdroids/design-tokens/semantic.css";` after
+  `tailwind.css`. Put the class `dark` on `<html>` (or any ancestor) for the
+  dark values.
+- **App:** the root view gets `style={vars(nativewindVars[scheme])}`
+  (`vars` from `nativewind`); the utilities read the variables.
 
 ## Using it
 

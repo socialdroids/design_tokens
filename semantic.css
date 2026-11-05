@@ -1,0 +1,71 @@
+/* Generated from tokens.json by build.js: do not edit. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --sd-surface: #ffffff;
+  --sd-surface-muted: #f8fafc;
+  --sd-border: #e2e8f0;
+  --sd-foreground: #0a0a0a;
+  --sd-muted-foreground: #64748b;
+  --sd-primary: #9141ac;
+  --sd-primary-hover: #76328e;
+  --sd-primary-foreground: #ffffff;
+  --sd-destructive: #dc2626;
+  --sd-destructive-foreground: #ffffff;
+  --sd-success-bg: #dcfce7;
+  --sd-success-fg: #166534;
+  --sd-warning-bg: #fef3c7;
+  --sd-warning-fg: #92400e;
+  --sd-danger-bg: #fee2e2;
+  --sd-danger-fg: #991b1b;
+  --sd-offline-bg: #f1f5f9;
+  --sd-offline-fg: #475569;
+}
+
+.dark {
+  --sd-surface: #0f0f12;
+  --sd-surface-muted: #1a1a1f;
+  --sd-border: #2e2e36;
+  --sd-foreground: #f5f5f5;
+  --sd-muted-foreground: #a1a1aa;
+  --sd-primary: #b36ccb;
+  --sd-primary-hover: #c48ad8;
+  --sd-primary-foreground: #0a0a0a;
+  --sd-destructive: #ef4444;
+  --sd-destructive-foreground: #0a0a0a;
+  --sd-success-bg: #14301f;
+  --sd-success-fg: #86efac;
+  --sd-warning-bg: #3a2a0a;
+  --sd-warning-fg: #fcd34d;
+  --sd-danger-bg: #3b1414;
+  --sd-danger-fg: #fca5a5;
+  --sd-offline-bg: #26262c;
+  --sd-offline-fg: #a1a1aa;
+}
+
+@theme inline {
+  --color-surface: var(--sd-surface);
+  --color-surface-muted: var(--sd-surface-muted);
+  --color-border: var(--sd-border);
+  --color-foreground: var(--sd-foreground);
+  --color-muted-foreground: var(--sd-muted-foreground);
+  --color-primary: var(--sd-primary);
+  --color-primary-hover: var(--sd-primary-hover);
+  --color-primary-foreground: var(--sd-primary-foreground);
+  --color-destructive: var(--sd-destructive);
+  --color-destructive-foreground: var(--sd-destructive-foreground);
+  --color-success-bg: var(--sd-success-bg);
+  --color-success-fg: var(--sd-success-fg);
+  --color-warning-bg: var(--sd-warning-bg);
+  --color-warning-fg: var(--sd-warning-fg);
+  --color-danger-bg: var(--sd-danger-bg);
+  --color-danger-fg: var(--sd-danger-fg);
+  --color-offline-bg: var(--sd-offline-bg);
+  --color-offline-fg: var(--sd-offline-fg);
+  --radius-control: 8px;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+  --spacing-tight: 8px;
+  --spacing-field: 12px;
+  --spacing-section: 24px;
+}
