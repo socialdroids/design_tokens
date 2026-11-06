@@ -66,3 +66,15 @@ test('semantic tokens do not shadow Tailwind scale names', () => {
     assert.doesNotMatch(name, /^(xs|sm|md|lg|xl|\d+)$/);
   }
 });
+
+test('the tokens added for the interface review (etapa 9) exist in both schemes', () => {
+  const added = ['focus-ring', 'selected-bg', 'inverse-surface', 'inverse-foreground', 'scrim'];
+  for (const scheme of ['light', 'dark']) {
+    for (const name of added) assert.ok(tokens.semantic[scheme][name], `${scheme} ${name}`);
+  }
+  assert.equal(tokens.semantic.light['focus-ring'], tokens.semantic.light.primary);
+  assert.equal(tokens.semantic.dark['focus-ring'], tokens.semantic.dark.primary);
+  assert.match(semanticCss(), /--color-selected-bg: var\(--sd-selected-bg\);/);
+  assert.equal(nativewindVars.dark['--sd-selected-bg'], '#2a1a31');
+  assert.equal(nativewindTheme.colors.scrim, 'var(--sd-scrim)');
+});

@@ -20,6 +20,11 @@
   --sd-danger-fg: #991b1b;
   --sd-offline-bg: #f1f5f9;
   --sd-offline-fg: #475569;
+  --sd-focus-ring: #9141ac;
+  --sd-selected-bg: #f2e8f5;
+  --sd-inverse-surface: #0a0a0a;
+  --sd-inverse-foreground: #f5f5f5;
+  --sd-scrim: #0a0a0a;
 }
 
 .dark {
@@ -41,6 +46,11 @@
   --sd-danger-fg: #fca5a5;
   --sd-offline-bg: #26262c;
   --sd-offline-fg: #a1a1aa;
+  --sd-focus-ring: #b36ccb;
+  --sd-selected-bg: #2a1a31;
+  --sd-inverse-surface: #f5f5f5;
+  --sd-inverse-foreground: #0a0a0a;
+  --sd-scrim: #000000;
 }
 
 @theme inline {
@@ -62,6 +72,11 @@
   --color-danger-fg: var(--sd-danger-fg);
   --color-offline-bg: var(--sd-offline-bg);
   --color-offline-fg: var(--sd-offline-fg);
+  --color-focus-ring: var(--sd-focus-ring);
+  --color-selected-bg: var(--sd-selected-bg);
+  --color-inverse-surface: var(--sd-inverse-surface);
+  --color-inverse-foreground: var(--sd-inverse-foreground);
+  --color-scrim: var(--sd-scrim);
   --radius-control: 8px;
   --radius-card: 16px;
   --radius-pill: 9999px;

@@ -1,6 +1,6 @@
 {
   "name": "@socialdroids/design-tokens",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Brand and semantic tokens shared by user_interface (Tailwind 4) and sd_app (NativeWind)",
   "main": "index.js",

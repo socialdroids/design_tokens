@@ -25,6 +25,14 @@ fails if one scheme lacks a name). The names are for the role, not the hue:
 `gap-tight|field|section` are named so they never replace Tailwind's own
 `rounded-lg` or `p-4`.
 
+Since v0.3.0 (interface review, etapa 9): `outline-focus-ring` (keyboard
+focus, same value as `primary`), `bg-selected-bg` (selected row, active item
+of the side panel), `bg-inverse-surface text-inverse-foreground` (toast) and
+`bg-scrim/50` (the veil behind a dialog or sheet; the opacity goes on the
+class, the token is a plain hex). The approved design system, with usage
+notes for every token, is in Claude Design:
+https://claude.ai/artifact/21aqkEsmrHMdSKBSPQFg6n
+
 - **Web:** `@import "@socialdroids/design-tokens/semantic.css";` after
   `tailwind.css`. Put the class `dark` on `<html>` (or any ancestor) for the
   dark values.
@@ -36,7 +44,7 @@ fails if one scheme lacks a name). The names are for the role, not the hue:
 Each app pins a tag:
 
 ```json
-"@socialdroids/design-tokens": "github:socialdroids/design_tokens#v0.1.0"
+"@socialdroids/design-tokens": "github:socialdroids/design_tokens#v0.3.0"
 ```
 
 The repository is public, so `npm install` fetches the tag's tarball with no
@@ -47,6 +55,6 @@ GitHub credentials (developer machines, Docker builds, CI).
 1. Edit `tokens.json`.
 2. `npm run build` (rewrites `tailwind.css`).
 3. `npm test` (fails while `tailwind.css` is out of date).
-4. Commit, then tag a new version (`git tag v0.2.0 && git push --tags`).
+4. Commit, then tag a new version (`git tag v0.3.0 && git push --tags`).
 5. Bump the tag in `user_interface/package.json` and `sd_app/package.json`
    and run `npm install` in each.
